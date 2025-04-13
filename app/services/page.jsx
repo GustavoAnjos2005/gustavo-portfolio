@@ -26,7 +26,7 @@ const services = [
   {
     num: "04",
     title: "Análise de Dados",
-    description: "Estou aprimorando meus conhecimentos em análise de dados, com grande referêncial em bancos de dados relacionais e não relacionais. Além de desenvolver habilidades no uso do Power BI para transformação e apresentação de dados. No segundo semestre do meu curso, concluí meu Projeto Experimental (PEX), onde trabalhei com dados de uma empresa automotiva, gerando insights estratégicos para apoiar a tomada de decisões.",
+    description: "Estou atualmente me aprofundando meus conhecimentos na área de dados, com foco especial em Análise de Dados. Tenho buscado constante aprimoramento por meio de desenvolvimento de projetos, cursos com certificação e cursos profissionalizantes, incluindo o curso de Análise de Dados oferecido pelo Google. Paralelamente, venho aplicando meus conhecimentos em projetos voltados para a área de dados, com ênfase no uso de bancos de dados relacionais e não relacionais, bem como em ferramentas como Excel, Power BI e outras voltadas à manipulação, transformação e visualização de dados.",
     href: "https://github.com/GustavoAnjos2005"
   },
 ]

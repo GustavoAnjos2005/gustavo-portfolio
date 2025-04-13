@@ -16,7 +16,7 @@ const stats = [
     text: "Tecnologias masterizadas",
   },
   {
-    num: 10,
+    num: 12,
     text: "Certificados concluídos",
   },
 ];
