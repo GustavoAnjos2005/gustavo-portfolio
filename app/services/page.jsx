@@ -20,7 +20,7 @@ const services = [
   {
     num: "03",
     title: "Dev de Banco de Dados",
-    description: "Tenho uma experiência sólida na construção de bancos de dados, bem como na análise, reformulação e otimização de bases de dados existentes. Tenho maior familiaridade com bancos como MySQL, MongoDB, Firebase e Drizzle.",
+    description: "Tenho uma experiência sólida na construção de bancos de dados, bem como na análise, reformulação e otimização de bases de dados existentes. Tenho maior familiaridade com bancos como MySQL, MongoDB, Firebase e PostgreSQL.",
     href: "https://github.com/GustavoAnjos2005"
   },
   {

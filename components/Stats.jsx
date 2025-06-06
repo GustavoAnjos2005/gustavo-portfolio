@@ -8,7 +8,7 @@ const stats = [
     text: "Anos de experiência acadêmico",
   },
   {
-    num: 24,
+    num: 30,
     text: "Projetos concluídos",
   },
   {
@@ -16,7 +16,7 @@ const stats = [
     text: "Tecnologias masterizadas",
   },
   {
-    num: 12,
+    num: 14,
     text: "Certificados concluídos",
   },
 ];

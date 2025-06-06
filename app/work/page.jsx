@@ -114,6 +114,26 @@ const projects = [
     live: 'https://jrm-veiculos.vercel.app/',
     github: 'https://github.com/GustavoAnjos2005/JRM-Veiculos',
   },
+  {
+    num: '11',
+    category: 'Full-Stack',
+    title: 'SecureTI',
+    description: 'Meu terceiro projeto PEX realizado na faculdade! Site para uma empresa focada em segurança da informação e banco de dados. Nele tem páginas explicando sobre os serviços oferecidos, e em cada uma dessas páginas contém um quiz para testar o conhecimento do usuário sobre o assunto abordado.',
+    stack: [{ name: "Next.JS" }, { name: "React.TS" }, { name: "TailWindCSS" }, { name: "MongoDB" }],
+    image: '/assets/secure1.png',
+    live: 'https://secure-ti.vercel.app/',
+    github: 'https://github.com/GustavoAnjos2005/secureTI',
+  },
+  {
+    num: '12',
+    category: 'Full-Stack',
+    title: 'Real-Chat',
+    description: 'Chat-Bot para usuários se comunicarem em tempo real, com autenticação de usuários e persistência de mensagens. Nele poderá mandar mensagens, fazer ligações em tempo real, compartilhar fotos e arquivos. Além de conter um chat com a I.A.',
+    stack: [{ name: "Node.JS" }, { name: "React.TS" }, { name: "TypeScript" }, { name: "Prisma" }, { name: "TailWindCSS" }, { name: "PostgreSQL" }, { name: "Redis" }],
+    image: '/assets/chat1.png',
+    live: 'https://realtime-chat-zeta-gray.vercel.app/',
+    github: 'https://github.com/GustavoAnjos2005/realchat',
+  },
 ]
 
 const Work = () => {
