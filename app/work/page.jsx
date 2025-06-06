@@ -129,7 +129,7 @@ const projects = [
     category: 'Full-Stack',
     title: 'Real-Chat',
     description: 'Chat-Bot para usuários se comunicarem em tempo real, com autenticação de usuários e persistência de mensagens. Nele poderá mandar mensagens, fazer ligações em tempo real, compartilhar fotos e arquivos. Além de conter um chat com a I.A.',
-    stack: [{ name: "Node.JS" }, { name: "React.TS" }, { name: "TypeScript" }, { name: "Prisma" }, { name: "TailWindCSS" }, { name: "PostgreSQL" }, { name: "Redis" }],
+    stack: [{ name: "Node.JS" }, { name: "React.TS" }, { name: "TailWindCSS" }, { name: "PostgreSQL" }, { name: "Redis" }],
     image: '/assets/chat1.png',
     live: 'https://realtime-chat-zeta-gray.vercel.app/',
     github: 'https://github.com/GustavoAnjos2005/realchat',
