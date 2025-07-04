@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const about = {
   title: "Minha Trajetória!",
-  description: "Tenho 20 anos e iniciei minha trajetória na área de T.I durante a pandemia, com cursos online de programação e fundamentos gerais. Esse interesse me levou a me aprofundar cada vez mais, começando pelo Prepara Cursos, onde pratiquei meus conhecimentos, e posteriormente na ETEC, onde obtive uma formação profissional em diversas áreas de T.I. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na Faculdade Carlos Drummond de Andrade (FCDA). Dedico meu tempo livre a projetos e ao aprendizado contínuo, sempre buscando evolução na área que tanto amo. Estou empenhado em conquistar minha primeira oportunidade profissional para aplicar e contribuir com meus conhecimentos, além de ganhar experiência em ambiente profisiional!",
+  description: "Profissional de 20 anos com formação sólida em Tecnologia da Informação, iniciada durante a pandemia através de cursos especializados online. Minha jornada inclui certificações pelo Prepara Cursos e formação técnica pela ETEC, culminando no atual curso de Análise e Desenvolvimento de Sistemas pela Faculdade Carlos Drummond de Andrade (FCDA). Dedico-me constantemente ao desenvolvimento de projetos práticos e à atualização em novas tecnologias, buscando sempre a excelência técnica. Estou preparado para contribuir em um ambiente profissional dinâmico, aplicando minha experiência em desenvolvimento de software e compartilhando conhecimentos com equipes multidisciplinares.",
   info: [
     {
       fieldName: "Nome",
@@ -39,8 +39,8 @@ const about = {
 }
 
 const education = {
-  title: "Minha Formação",
-  description: "Este é o meu percusso em formações acadêmicas!",
+  title: "Formação Acadêmica",
+  description: "Trajetória educacional focada em tecnologia e desenvolvimento de software",
   items: [
     {
       institution: "Colégio Sena de Miranda",
@@ -66,8 +66,8 @@ const education = {
 }
 
 const skills = {
-  title: "Principais Hard/Soft Skills",
-  description: "Essas são as linguagens de programação, bancos de dados e tecnologias com as quais possuo maior familiaridade e proficiência. Além disso, destaco ao final minhas principais soft-skills.",
+  title: "Competências Técnicas e Comportamentais",
+  description: "Conjunto abrangente de tecnologias e habilidades interpessoais que aplico no desenvolvimento de soluções inovadoras",
   skillList: [
     {
       icon: <FaHtml5 />,

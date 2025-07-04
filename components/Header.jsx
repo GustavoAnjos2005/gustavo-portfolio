@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 
 {/* componentes */}
 import Nav from "./Nav";
@@ -18,9 +19,18 @@ const Header = () => {
             {/* desktop nav e contrata-me button */}
             <div className="hidden xl:flex items-center gap-8">
              <Nav />
-             <Link href="mailto:anjos7623@gmail.com">
-             <Button>Me Contrate</Button>
-             </Link>
+             <TooltipProvider delayDuration={100}>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        <Link href="mailto:anjos7623@gmail.com">
+                            <Button>Entre em Contato</Button>
+                    </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Envie um e-mail para discutir oportunidades</p>
+                    </TooltipContent>
+                </Tooltip>
+             </TooltipProvider>
             </div>
 
             {/* mobile nav */}

@@ -23,3 +23,60 @@
     -webkit-text-stroke: 1px #bf45bf;
   }
 }
+
+@layer components {
+  .page-transition-wrapper {
+    @apply relative overflow-hidden;
+  }
+  
+  .page-transition-gradient {
+    @apply absolute inset-0 bg-gradient-radial from-accent/5 via-transparent to-transparent;
+    mask-image: radial-gradient(circle at center, black, transparent);
+  }
+}
+
+/* Animações personalizadas */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Efeito de brilho */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}

@@ -5,32 +5,43 @@ import { usePathname } from "next/navigation";
 
 const links = [
     {
-        name: 'introdução',
+        name: 'Introdução',
         path: '/',
     },
     {
-        name: 'especialidades',
+        name: 'Especialidades',
         path: '/services',
     },
     {
-        name: 'resumo',
+        name: 'Resumo',
         path: '/resume',
     },
     {
-        name: 'projetos',
+        name: 'Projetos',
         path: '/work',
     }
 ];
 
-const Nav = () => {
+const Nav = ({ containerStyles, linkStyles }) => {
     const pathname = usePathname();
     return (
-        <nav className="flex gap-8">
+        <nav className={`${containerStyles || 'flex gap-8'}`}>
             {links.map((link, index) => {
-                return (<Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}>{link.name}</Link>);
+                const isActive = link.path === pathname;
+                return (
+                    <Link 
+                        href={link.path} 
+                        key={index} 
+                        className={`${
+                            isActive ? "text-accent" : "text-white"
+                        } ${linkStyles || "font-medium"} hover:text-accent transition-all duration-300`}
+                    >
+                        {link.name}
+                    </Link>
+                );
             })}
         </nav>
     );
 };
 
-export default Nav
+export default Nav;
