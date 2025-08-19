@@ -10,10 +10,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const about = {
-  title: "Minha Trajetória!",
-  description: "Profissional de 20 anos com formação sólida em Tecnologia da Informação, iniciada durante a pandemia através de cursos especializados online. Minha jornada inclui certificações pelo Prepara Cursos e formação técnica pela ETEC, culminando no atual curso de Análise e Desenvolvimento de Sistemas pela Faculdade Carlos Drummond de Andrade (FCDA). Dedico-me constantemente ao desenvolvimento de projetos práticos e à atualização em novas tecnologias, buscando sempre a excelência técnica. Estou preparado para contribuir em um ambiente profissional dinâmico, aplicando minha experiência em desenvolvimento de software e compartilhando conhecimentos com equipes multidisciplinares.",
+  title: "Minha Trajetória",
+  description: "Profissional de 20 anos com formação sólida em Tecnologia da Informação, iniciada durante a pandemia através de cursos especializados online. Minha jornada inclui certificações pelo Prepara Cursos e formação técnica pela ETEC, culminando no atual curso de Análise e Desenvolvimento de Sistemas pela Faculdade Carlos Drummond de Andrade (FCDA). Dedico-me constantemente ao desenvolvimento de projetos práticos e à atualização em novas tecnologias, buscando sempre a excelência técnica. Atualmente, estou realizando minha primeira experiência profissional como Jovem Aprendiz de TI, com foco em Infraestrutura e Telecom, atuando em atividades de suporte ao cliente e usuário, monitoramento de sistemas e infraestrutura, administração de processamento de dados, gestão de hardware e software, segurança da informação e ambiente de trabalho.",
   info: [
     {
       fieldName: "Nome",
@@ -25,7 +26,7 @@ const about = {
     },
     {
       fieldName: "Experiência",
-      fieldValue: "3 Anos",
+      fieldValue: "Jovem Aprendiz de TI (Infraestrutura e Telecom)",
     },
     {
       fieldName: "Email",
@@ -40,7 +41,7 @@ const about = {
 
 const education = {
   title: "Formação Acadêmica",
-  description: "Trajetória educacional focada em tecnologia e desenvolvimento de software",
+  description: "Segue abaixo a minha trajetória educacional!",
   items: [
     {
       institution: "Colégio Sena de Miranda",
@@ -166,40 +167,95 @@ const skills = {
 
 const Resume = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{
-      opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-    }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="about" className="flex flex-col xl:flex-row gap-[60px]">
+        <Tabs
+          defaultValue="about"
+          className="flex flex-col xl:flex-row gap-[60px]"
+        >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="about">Sobre Mim</TabsTrigger>
             <TabsTrigger value="education">Educação</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="experience">Experiência</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="felx flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
+              </div>
+            </TabsContent>
+            <TabsContent value="experience" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">Experiência Profissional</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  Segue abaixo a minha trajetória profissional!
+                </p>
+                <div className="bg-[#232329] py-6 px-6 rounded-xl max-w-[820px] mx-auto text-left">
+                  <span className="text-accent">Ago 2025 - Atual</span>
+                  <div className="mt-1">
+                    <Link
+                      href="https://www.terrainvestimentos.com.br/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent text-lg font-medium inline-block transform transition-all duration-200 hover:scale-105 border-b-2 border-transparent hover:border-accent"
+                    >
+                      Terra Investimentos
+                    </Link>
+                  </div>
+                  <h3 className="text-xl font-bold mt-2">
+                    Jovem Aprendiz de TI — Infraestrutura e Telecom — Terra Investimentos
+                  </h3>
+                  <p className="text-white/60 mt-2">
+                    Minha primeira experiência profissional na área de T.I! Atuando atualmente como Jovem Aprendiz, cargo em Técnico de suporte ao usuário de tecnologia da informação, focada em Infraestrutura e Telecom. Segue abaixo as minhas principais atividades:
+                  </p>
+                  <ul className="list-disc list-inside mt-3 text-white/60">
+                    <li>Suporte ao cliente/usuário;</li>
+                    <li>Monitoramento de sistemas e infraestrutura;</li>
+                    <li>Administração de processamento de dados;</li>
+                    <li>Gestão de hardaware e software;</li>
+                    <li>
+                      Segurança da informação;
+                    </li>
+                    <li>Ambiente de trabalho.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {education.description}
+                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
@@ -212,7 +268,9 @@ const Resume = () => {
                           <h3 className="text-xl font-bold break-words">
                             {item.degree}
                           </h3>
-                          <p className="text-white/60 break-words">{item.institution}</p>
+                          <p className="text-white/60 break-words">
+                            {item.institution}
+                          </p>
                         </li>
                       );
                     })}
@@ -224,7 +282,9 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
@@ -233,7 +293,9 @@ const Resume = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
@@ -241,7 +303,7 @@ const Resume = () => {
                           </Tooltip>
                         </TooltipProvider>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
@@ -250,7 +312,7 @@ const Resume = () => {
         </Tabs>
       </div>
     </motion.div>
-  )
+  );
 }
 
 export default Resume
