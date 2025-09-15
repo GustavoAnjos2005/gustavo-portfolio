@@ -192,9 +192,9 @@ const Resume = () => {
               value="about"
               className="w-full text-center xl:text-left"
             >
-              <div className="felx flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+              <div className="flex flex-col gap-8">
+                <h3 className="text-4xl font-bold mb-4">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 mb-8">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
@@ -231,7 +231,7 @@ const Resume = () => {
                     </Link>
                   </div>
                   <h3 className="text-xl font-bold mt-2">
-                    Jovem Aprendiz de TI — Infraestrutura e Telecom — Terra Investimentos
+                    Jovem Aprendiz de TI — Infraestrutura e Telecom
                   </h3>
                   <p className="text-white/60 mt-2">
                     Minha primeira experiência profissional na área de T.I! Atuando atualmente como Jovem Aprendiz, cargo em Técnico de suporte ao usuário de tecnologia da informação, focada em Infraestrutura e Telecom. Segue abaixo as minhas principais atividades:

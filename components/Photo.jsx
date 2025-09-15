@@ -23,7 +23,7 @@ const Photo = () => {
   }, [router]);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex justify-center xl:justify-start">
       <motion.div
         key={key} // Força re-render da animação
         initial={{ opacity: 0 }}
@@ -35,6 +35,7 @@ const Photo = () => {
             ease: "easeIn"
           }
         }}
+        className="flex justify-center xl:justify-start"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -46,14 +47,14 @@ const Photo = () => {
               ease: "easeInOut"
             }
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
             src="/assets/foto-eu.png"
             priority={false}
             quality={100}
             fill
-            sizes="(max-width: 768px) 298px, 498px"
+            sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 498px"
             alt="Foto de Gustavo Anjos"
             className="object-contain"
             onLoad={() => setIsReady(true)}
@@ -61,7 +62,7 @@ const Photo = () => {
         </motion.div>
 
         <motion.svg
-          className="w-[300px] xl:w-[560px] h-[300px] xl:h-[506px]"
+          className="w-[282px] h-[282px] sm:w-[322px] sm:h-[322px] xl:w-[560px] xl:h-[506px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
